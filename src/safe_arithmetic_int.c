@@ -6,7 +6,7 @@
  * Returns 1 if two integers can be safely added without overflow or underflow.
  * Returns 0 otherwise.
  */
-int check_add_safe(int a, int b) {
+int check_add_safe_int(int a, int b) {
 	// Assume safe.
 	int ret = 1;
 
@@ -38,8 +38,8 @@ int check_add_safe(int a, int b) {
  * Returns sum if safe.
  * Exit with error code otherwise.
  */
-int add_safe(int a, int b) {
-	if (0 != check_add_safe(a, b)) {
+int add_safe_int(int a, int b) {
+	if (0 != check_add_safe_int(a, b)) {
 		// If sum is safe, return sum.
 		return a + b;
 	} else {
